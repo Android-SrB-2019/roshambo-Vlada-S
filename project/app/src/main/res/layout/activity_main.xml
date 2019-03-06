@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Author: Vlada Shevtsova-->
+<!--Date:   05-Mar-2019-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/rock_top"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/rock_desc"
+        android:onClick="playerChoseRock"
+        app:layout_constraintEnd_toStartOf="@+id/paper_top"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rock_button" />
+
+    <ImageView
+        android:id="@+id/paper_top"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/paper_desc"
+        android:onClick="playerChosePaper"
+        app:layout_constraintEnd_toStartOf="@+id/scissors_top"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rock_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/paper_button" />
+
+    <ImageView
+        android:id="@+id/scissors_top"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/scissors_desc"
+        android:onClick="playerChoseScissors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/paper_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/scissor_button" />
+
+    <ImageView
+        android:id="@+id/player_choice"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/player_s_choice_desc"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/game_choice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/game_choice"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/games_choice_desc"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player_choice"
+        app:srcCompat="@drawable/none" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/win_lose_draw"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
